@@ -11,7 +11,7 @@ console = Console()
 
 @click.command(help="Run Python scripts with inline metadata directly from URLs")
 @click.version_option()
-@click.option("--add-repo", "-ar", help="Add a repository URL containing Python scripts")
+@click.option("--add-repo", "-ar", help="Add a GitHub repository URL containing Python scripts")
 @click.option("--list", "-l", "show_list_flag", is_flag=True, help="List all available scripts")
 @click.argument('script_and_args', nargs=-1, type=click.UNPROCESSED)
 @click.option("--uv-args", "-ua", help="Arguments to pass to uv run command, e.g. '--ua \"--python 3.11\"'")
