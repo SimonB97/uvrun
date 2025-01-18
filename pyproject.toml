@@ -2,7 +2,7 @@
 name = "uvrun"
 version = "0.1.0"
 description = "Run Python scripts with inline metadata directly from URLs"
-authors = [{name = "Your Name", email = "your.email@example.com"}]
+authors = [{name = "Simon Benedict", email = "hi@sbenedict.dev"}]
 dependencies = [
     "click>=8.1.7",
     "tomli-w>=1.0.0",
