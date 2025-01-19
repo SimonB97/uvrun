@@ -32,8 +32,9 @@ class Config:
         self._save_config(self.config)
 
     def get_script_url(self, script_name: str) -> Optional[str]:
-        # Remove .py if present
-        script_name = script_name.replace('.py', '')
+        # Support both with and without .py extension
+        if not script_name.endswith('.py'):
+            script_name += '.py'
         
         for repo_info in self.config["repos"].values():
             if script_name in repo_info["scripts"]:

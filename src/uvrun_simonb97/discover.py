@@ -15,8 +15,7 @@ def fetch_script_list(repo_url: str) -> Dict[str, str]:
                 content = requests.get(raw_url).text
                 if "# /// script" in content and "# ///" in content:
                     name = item["path"].split("/")[-1]
-                    scripts[name] = item["path"]
-                    scripts[name.replace(".py", "")] = item["path"]
+                    scripts[name] = item["path"]  # Only store with .py extension
         return scripts
     
     raise ValueError("Currently only GitHub repositories are supported")
