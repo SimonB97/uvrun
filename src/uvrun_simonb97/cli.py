@@ -11,18 +11,18 @@ console = Console()
 
 @click.command(help="Run Python scripts with inline metadata directly from URLs")
 @click.version_option()
-@click.option("--add-repo", "-ar", help="Add a GitHub repository URL containing Python scripts")
+@click.option("--add", "-a", help="Add a GitHub repository URL containing Python scripts")
 @click.option("--list", "-l", "show_list_flag", is_flag=True, help="List all available scripts")
 @click.argument('script_and_args', nargs=-1, type=click.UNPROCESSED)
 @click.option("--uv-args", "-ua", help="Arguments to pass to uv run command, e.g. '--ua \"--python 3.11\"'")
 @click.option("--refresh", is_flag=True, help="Pass --refresh flag to uv run command")
-def cli(add_repo: Optional[str], show_list_flag: bool, script_and_args: tuple, uv_args: Optional[str], refresh: bool) -> None:
+def cli(add: Optional[str], show_list_flag: bool, script_and_args: tuple, uv_args: Optional[str], refresh: bool) -> None:
     config = Config()
 
-    if add_repo:
+    if add:
         try:
-            scripts = fetch_script_list(add_repo)
-            config.add_repo(add_repo, scripts)
+            scripts = fetch_script_list(add)
+            config.add_repo(add, scripts)
             script_count = len(scripts)
             console.print(f"[green]Found {script_count} script{'s' if script_count != 1 else ''} in repository[/green]")
         except Exception as e:
