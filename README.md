@@ -54,4 +54,4 @@ To make a script discoverable by uvrun, add the following metadata:
 
 ## License
 
-MIT [License](LICENSE)
+[MIT License](LICENSE)
