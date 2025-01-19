@@ -25,8 +25,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install python-semantic-release
-          version_changed=$(semantic-release version | grep -q "The next version" && echo "true" || echo "false")
-          echo "version_changed=$version_changed" >> "$GITHUB_OUTPUT"
+          if semantic-release version | grep "The next version"; then
+            echo "version_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "version_changed=false" >> "$GITHUB_OUTPUT"
+          fi
 
   publish:
     needs: release
