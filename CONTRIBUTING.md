@@ -69,8 +69,8 @@ Breaking Changes:
 Examples:
 
 ```bash
-feat(gitlab): add support for gitlab repositories
 fix(config): handle missing config file
+feat(gitlab): add support for gitlab repositories
 feat!: change CLI interface
 ```
 
