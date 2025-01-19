@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v0.1.2 (2025-01-19)
+
+### Bug Fixes
+
+- **project**: Update package name to uvrun_simonb97
+  ([`26a0e26`](https://github.com/SimonB97/uvrun/commit/26a0e26f44f034c09b33c0a90c2a1e7199985d26))
+
+### Chores
+
+- Rename package from uvrun_simonb97 to uvrun
+  ([`d01e079`](https://github.com/SimonB97/uvrun/commit/d01e0796f4da71d2e404d7ce1b54ae59419b31e5))
+
+### Continuous Integration
+
+- Add conditional publishing based on version change
+  ([`4c70aaf`](https://github.com/SimonB97/uvrun/commit/4c70aaf7df293edd551806f74f6a7c24bfd76768))
+
+
 ## v0.1.1 (2025-01-19)
 
 ### Bug Fixes
