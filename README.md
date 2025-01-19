@@ -13,7 +13,7 @@ Run Python scripts with inline metadata directly from URLs. This simple tool int
 ## Installation
 
 ```bash
-pip install uvrun_simonb97
+pip install uvrun
 ```
 
 ## Usage
