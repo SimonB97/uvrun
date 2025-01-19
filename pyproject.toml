@@ -1,5 +1,5 @@
 [project]
-name = "uvrun"
+name = "uvrun_simonb97"
 version = "0.1.1"
 authors = [{name = "Simon Benedict", email = "hi@sbenedict.dev"}]
 description = "Run Python scripts with inline metadata directly from URLs"
@@ -21,17 +21,17 @@ dev = [
 ]
 
 [project.scripts]
-uvrun = "uvrun.cli:main"
+uvrun = "uvrun_simonb97.cli:main"
 
 [build-system]
 requires = ["hatchling", "build"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/uvrun"]
+packages = ["src/uvrun_simonb97"]
 
 [tool.semantic_release]
-version_variables = ["src/uvrun/__init__.py:__version__"]
+version_variables = ["src/uvrun_simonb97/__init__.py:__version__"]
 version_toml = ["pyproject.toml:project.version"]
 commit_message = "chore: release {version}"
 branch = "main"
