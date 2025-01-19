@@ -21,7 +21,7 @@ pip install uvrun_simonb97
 Add a repository:
 
 ```bash
-uvrun --add-repo https://github.com/username/repo
+uvrun --add https://github.com/username/repo
 ```
 
 List available scripts:
