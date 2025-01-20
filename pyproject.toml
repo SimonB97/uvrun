@@ -36,10 +36,10 @@ version_variables = ["src/uvrun/__init__.py:__version__"]
 commit_message = "chore: release {version}"
 major_on_zero = true
 tag_format = "v{version}"
-build_command = "python -m build"
 changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+upload_to_repository = true
+build_command = "python -m build"
 dist_path = "dist/"
-upload_to_release = true
 branch = "main"
 
 [tool.ruff]
