@@ -12,17 +12,23 @@ jobs:
       id-token: write
     environment:
       name: pypi
+      url: https://pypi.org/p/uvrun_simonb97
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
       - name: Python Setup
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
+
       - name: Release and Publish
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          pip install python-semantic-release build
+          pip install python-semantic-release
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
           semantic-release publish
