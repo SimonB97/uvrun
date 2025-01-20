@@ -13,7 +13,7 @@ Run Python scripts with inline metadata directly from URLs. This simple tool int
 ## Installation
 
 ```bash
-pip install uvrun_simonb97
+pip install uvrun
 ```
 
 ## Usage
@@ -36,19 +36,25 @@ Run a script:
 uvrun script_name arg1 arg2
 ```
 
+(Note: both script_name and script_name.py are valid)
+
 With specific Python version:
 
 ```bash
-uvrun script_name --uv-args "--python 3.11"
+uvrun script_name --uv-args "--refresh"
 ```
 
 ## Script Metadata
 
-To make a script discoverable by uvrun, add the following metadata:
+To make a script discoverable by uvrun, add the following [inline metadata](https://peps.python.org/pep-0723/) at the top of the file:
 
 ```python
 # /// script
-# /// description: What your script does
+# requires-python = ">=3.12"
+# dependencies = [
+#     "flask>=2.0.0",
+#     "requests>=2.31.0",
+# ]
 # ///
 ```
 
