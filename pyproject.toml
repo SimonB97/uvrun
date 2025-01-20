@@ -1,6 +1,6 @@
 [project]
 name = "uvrun"
-version = "0.1.5"
+version = "0.1.3"
 authors = [{name = "Simon Benedict", email = "hi@sbenedict.dev"}]
 description = "Run Python scripts with inline metadata directly from URLs"
 readme = "README.md"
