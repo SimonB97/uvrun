@@ -7,7 +7,6 @@ import shlex
 from .config import Config
 from .discover import fetch_script_list
 
-
 console = Console()
 
 @click.command(help="Run Python scripts with inline metadata directly from URLs")
