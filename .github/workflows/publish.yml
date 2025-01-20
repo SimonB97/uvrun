@@ -32,21 +32,15 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -U pip
-          pip install python-semantic-release
+          pip install build python-semantic-release twine
 
-      - name: Release version and create changelog
+      - name: Version and Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"
           semantic-release version
-          git push --tags
-
-      - name: Build and Publish
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          pip install build twine
           python -m build
-          semantic-release publish
+          semantic-release publish --no-build
+          git push --tags
