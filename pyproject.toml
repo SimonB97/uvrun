@@ -31,16 +31,15 @@ build-backend = "hatchling.build"
 packages = ["src/uvrun"]
 
 [tool.semantic_release]
-version_variables = ["src/uvrun/__init__.py:__version__"]
 version_toml = ["pyproject.toml:project.version"]
+version_variables = ["src/uvrun/__init__.py:__version__"]
 commit_message = "chore: release {version}"
-major_on_zero = false
+major_on_zero = true
 tag_format = "v{version}"
 build_command = "python -m build"
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
 dist_path = "dist/"
-upload_to_vcs_release = true
 upload_to_release = true
-publish_command = "python -m twine upload --skip-existing {files}"
 branch = "main"
 
 [tool.ruff]
