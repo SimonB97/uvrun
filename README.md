@@ -1,5 +1,8 @@
 # uvrun
 
+[![PyPi Version](https://img.shields.io/pypi/v/uvrun.svg)](https://pypi.python.org/pypi/uvrun/)
+[![PyPi Downloads](http://pepy.tech/badge/uvrun)](http://pepy.tech/project/uvrun)
+
 Run Python scripts with inline metadata directly from URLs. This simple tool integrates with [uv](https://github.com/astral-sh/uv) to provide a seamless experience for running Python scripts from GitHub repositories.
 
 ## Features
